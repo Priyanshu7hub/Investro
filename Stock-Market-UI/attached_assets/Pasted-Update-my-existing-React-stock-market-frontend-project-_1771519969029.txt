@@ -1,0 +1,164 @@
+Update my existing React stock market frontend project.
+
+====================================================
+WEBSITE IDENTITY
+====================================================
+- Change the website name EVERYWHERE from "Investo" to "Investro"
+- Update logo text, titles, navbar, landing page, and metadata
+
+====================================================
+TECH STACK (STRICT – DO NOT CHANGE)
+====================================================
+- React.js (functional components + hooks only)
+- React Router DOM
+- Context API for state management
+- Tailwind CSS for styling
+- Chart.js or Recharts for graphs
+- Frontend only (NO backend)
+- NO real trading APIs (use mock/fake data)
+
+====================================================
+AUTHENTICATION BEHAVIOR
+====================================================
+- Implement authentication using Context API
+- Persist auth state using localStorage
+- After user logs in or registers:
+  - Hide "Log In" and "Get Started" buttons
+  - Show Profile icon + Logout button
+- On logout:
+  - Restore "Log In" and "Get Started"
+
+====================================================
+LANDING / FIRST PAGE REQUIREMENTS
+====================================================
+- REMOVE "View Demo" button completely
+- Show:
+  - Website name "Investro"
+  - Short tagline
+  - Get Started button (only if user NOT logged in)
+- Add HOVER EFFECT:
+  - When user hovers anywhere on the landing page:
+    - Show animated candlestick (candle) charts moving in the background
+  - When hover ends:
+    - Animation fades out smoothly
+- Candle animation rules:
+  - Pure frontend (React + CSS / Tailwind / optional Framer Motion)
+  - No APIs
+  - Subtle, premium, dark-theme style
+  - Candles stay in background and do not block content
+  - Green/red candle movement like real market
+
+====================================================
+REMOVE FROM DASHBOARD
+====================================================
+- Completely REMOVE "Add Funds" feature and UI
+
+====================================================
+DASHBOARD PAGE REQUIREMENTS
+====================================================
+- Show a combined market overview graph (entire market)
+- Show market summary cards
+- Implement a WORKING search bar:
+  - Search by real NIFTY 50 company name OR symbol
+  - Filter results instantly
+- Display for each stock:
+  - Company name
+  - Symbol
+  - Fake but realistic price
+  - Percentage change (green for positive, red for negative)
+- Clicking any stock:
+  - Opens stock detail page in a NEW TAB
+
+====================================================
+NIFTY 50 DATA
+====================================================
+- Use REAL NIFTY 50 company names and symbols
+- Prices must be FAKE but realistic
+- Percentage changes green/red
+- Store data in a separate data file
+- No API calls
+
+====================================================
+STOCK DETAIL PAGE (/stock/:symbol)
+====================================================
+- Must open in a NEW TAB
+- Show ONLY the selected stock’s graph
+- Display:
+  - Company name
+  - Symbol
+  - Current fake price
+- BUY & SELL FUNCTIONALITY (SIMULATED REAL LOGIC):
+  - Buy stock → increases quantity
+  - Sell stock → decreases quantity
+  - Prevent selling more than owned
+  - Remove stock if quantity becomes zero
+- Maintain and calculate:
+  - Quantity
+  - Average Buy Price
+  - Total Invested Amount
+  - Profit / Loss (P&L)
+- All logic handled via Context API
+
+====================================================
+PORTFOLIO PAGE
+====================================================
+- Display all purchased stocks
+- Show:
+  - Company name & symbol
+  - Quantity
+  - Average buy price
+  - Current price
+  - Invested amount
+  - Profit / Loss (green/red)
+- Data must update in real-time when buy/sell happens
+
+====================================================
+STATE MANAGEMENT (MANDATORY)
+====================================================
+- AuthContext:
+  - Login / Logout
+  - Persist state with localStorage
+- MarketContext:
+  - NIFTY 50 stock data
+  - Market graph data
+- PortfolioContext:
+  - Buy stock
+  - Sell stock
+  - Quantity management
+  - P&L calculations
+
+====================================================
+ROUTING
+====================================================
+- Use React Router DOM
+- Required routes:
+  - /
+  - /dashboard
+  - /portfolio
+  - /stock/:symbol
+  - /login
+  - /register
+
+====================================================
+FOLDER STRUCTURE (STRICT)
+====================================================
+src/
+ ├─ components/
+ ├─ pages/
+ ├─ context/
+ ├─ data/
+ ├─ routes/
+ ├─ App.jsx
+ ├─ main.jsx
+
+====================================================
+OUTPUT REQUIREMENTS
+====================================================
+- Provide FULL React code for all files
+- Code must be clean, readable, and production-style
+- Ready to run in Replit without errors
+- Explain:
+  - Folder structure
+  - How components connect
+  - How buy/sell logic works
+- Do NOT include backend or real APIs

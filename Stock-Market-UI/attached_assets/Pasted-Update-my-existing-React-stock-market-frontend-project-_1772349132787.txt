@@ -1,0 +1,681 @@
+Update my existing React stock market frontend project.
+
+====================================================
+WEBSITE IDENTITY
+
+Change the website name EVERYWHERE from "Investo" to "Investro"
+
+Update logo text, titles, navbar, landing page, and metadata
+
+====================================================
+TECH STACK (STRICT – DO NOT CHANGE)
+
+React.js (functional components + hooks only)
+
+React Router DOM
+
+Context API for state management
+
+Tailwind CSS for styling
+
+Chart.js (for graphs)
+
+Frontend only (NO backend)
+
+NO real trading APIs (use mock/fake data only)
+
+====================================================
+AUTHENTICATION BEHAVIOR
+
+Implement authentication using Context API
+
+Persist auth state using localStorage
+
+After user logs in or registers:
+
+Hide "Log In" and "Get Started" buttons
+
+Show Profile icon + Logout button
+
+On logout:
+
+Restore "Log In" and "Get Started"
+
+====================================================
+LANDING / FIRST PAGE REQUIREMENTS
+
+REMOVE "View Demo" button completely
+
+Show:
+
+Website name "Investro"
+
+Short tagline
+
+Get Started button (only if user NOT logged in)
+
+Add HOVER EFFECT:
+
+When user hovers anywhere on the landing page:
+
+Show animated candlestick charts moving in the background
+
+When hover ends:
+
+Animation fades out smoothly
+
+Candle animation rules:
+
+Pure frontend (React + Tailwind + optional Framer Motion allowed)
+
+No APIs
+
+Subtle, premium, dark-theme style
+
+Candles stay in background and do not block content
+
+Green/red candle movement like real market
+
+====================================================
+REMOVE FROM DASHBOARD
+
+Completely REMOVE "Add Funds" feature and UI
+
+====================================================
+DASHBOARD PAGE REQUIREMENTS
+
+Show a combined market overview graph (entire market)
+
+Show market summary cards
+
+Implement a WORKING search bar:
+
+Search by real NIFTY 50 company name OR symbol
+
+Filter results instantly
+
+Display for each stock:
+
+Company name
+
+Symbol
+
+Fake but realistic price
+
+Percentage change (green for positive, red for negative)
+
+Clicking any stock:
+
+Opens stock detail page in a NEW TAB
+
+====================================================
+NIFTY 50 DATA
+
+Use REAL NIFTY 50 company names and symbols
+
+Prices must be FAKE but realistic
+
+Percentage changes must show green/red styling
+
+Store data in a separate file inside /data folder
+
+No API calls
+
+====================================================
+STOCK DETAIL PAGE (/stock/:symbol)
+
+Must open in a NEW TAB
+
+Show ONLY the selected stock’s graph
+
+Display:
+
+Company name
+
+Symbol
+
+Current fake price
+
+BUY & SELL FUNCTIONALITY (SIMULATED REAL LOGIC):
+
+Buy stock → increases quantity
+
+Sell stock → decreases quantity
+
+Prevent selling more than owned
+
+Remove stock if quantity becomes zero
+
+Maintain and calculate:
+
+Quantity
+
+Average Buy Price
+
+Total Invested Amount
+
+Profit / Loss (P&L)
+
+All logic handled via Context API
+
+====================================================
+PORTFOLIO PAGE REQUIREMENTS
+
+Create a dedicated /portfolio route
+
+Display all purchased stocks in a clean table or card layout
+
+Show for each stock:
+
+Company name & symbol
+
+Quantity owned
+
+Average buy price
+
+Current price (from MarketContext mock data)
+
+Total invested amount
+
+Current value
+
+Profit / Loss (green for profit, red for loss)
+
+Show overall portfolio summary at the top:
+
+Total invested amount
+
+Total current value
+
+Overall Profit / Loss
+
+Data must update in real-time when buy/sell happens
+
+If no stocks are owned:
+
+Show a clean empty state message
+
+All portfolio calculations must be handled via PortfolioContext
+
+====================================================
+STATE MANAGEMENT (MANDATORY)
+
+AuthContext:
+
+Login / Logout
+
+Persist state with localStorage
+
+MarketContext:
+
+NIFTY 50 stock data
+
+Market overview graph data
+
+PortfolioContext:
+
+Buy stock
+
+Sell stock
+
+Quantity management
+
+Average price calculation
+
+Invested amount tracking
+
+Profit & Loss calculations
+
+====================================================
+ROUTING
+
+Use React Router DOM
+
+Required routes:
+
+/
+
+/dashboard
+
+/portfolio
+
+/stock/:symbol
+
+/login
+
+/register
+
+====================================================
+FOLDER STRUCTURE (STRICT)
+
+src/
+├─ components/
+├─ pages/
+├─ context/
+├─ data/
+├─ routes/
+├─ App.jsx
+├─ main.jsx
+
+====================================================
+OUTPUT REQUIREMENTS
+
+Provide FULL React code for all files
+
+Code must be clean, readable, and production-style
+
+Must follow the exact folder structure
+
+Must be ready to run directly in Replit without any modification
+
+No pseudo code
+
+No partial snippets
+
+No explanations
+
+Provide complete working implementation
+
+If you want, I can now generate the entire Investro project code exactly matching this prompt.
+
+add about us page in the prompt ,help page also like grow .And write the content according to the real website .
+
+Perfect ✅ — here is your fully upgraded final prompt including:
+
+✅ Portfolio page
+
+✅ About Us page
+
+✅ Help page (like Groww-style support section)
+
+✅ Realistic, professional content
+
+✅ Same structured format
+
+✅ Clean and strict
+
+You can copy-paste this directly 👇
+
+Update my existing React stock market frontend project.
+====================================================
+WEBSITE IDENTITY
+
+Change the website name EVERYWHERE from "Investo" to "Investro"
+
+Update logo text, titles, navbar, landing page, and metadata
+
+Website theme: Premium, modern, dark finance UI
+
+Tone: Professional, trustworthy, minimal (similar to Groww / Zerodha style)
+
+====================================================
+TECH STACK (STRICT – DO NOT CHANGE)
+
+React.js (functional components + hooks only)
+
+React Router DOM
+
+Context API for state management
+
+Tailwind CSS for styling
+
+Chart.js (for graphs)
+
+Frontend only (NO backend)
+
+NO real trading APIs (use mock/fake data only)
+
+====================================================
+AUTHENTICATION BEHAVIOR
+
+Implement authentication using Context API
+
+Persist auth state using localStorage
+
+After user logs in or registers:
+
+Hide "Log In" and "Get Started" buttons
+
+Show Profile icon + Logout button
+
+On logout:
+
+Restore "Log In" and "Get Started"
+
+====================================================
+LANDING / FIRST PAGE REQUIREMENTS
+
+REMOVE "View Demo" button completely
+
+Show:
+
+Website name "Investro"
+
+Short tagline (Example: "Smart Investing. Simplified.")
+
+Get Started button (only if user NOT logged in)
+
+Add HOVER EFFECT:
+
+When user hovers anywhere on the landing page:
+
+Show animated candlestick charts moving in the background
+
+When hover ends:
+
+Animation fades out smoothly
+
+Candle animation rules:
+
+Pure frontend (React + Tailwind + optional Framer Motion allowed)
+
+No APIs
+
+Subtle, premium, dark-theme style
+
+Candles stay in background and do not block content
+
+Green/red candle movement like real market
+
+====================================================
+REMOVE FROM DASHBOARD
+
+Completely REMOVE "Add Funds" feature and UI
+
+====================================================
+DASHBOARD PAGE REQUIREMENTS
+
+Show a combined market overview graph (entire market)
+
+Show market summary cards
+
+Implement a WORKING search bar:
+
+Search by real NIFTY 50 company name OR symbol
+
+Filter results instantly
+
+Display for each stock:
+
+Company name
+
+Symbol
+
+Fake but realistic price
+
+Percentage change (green for positive, red for negative)
+
+Clicking any stock:
+
+Opens stock detail page in a NEW TAB
+
+====================================================
+NIFTY 50 DATA
+
+Use REAL NIFTY 50 company names and symbols
+
+Prices must be FAKE but realistic
+
+Percentage changes must show green/red styling
+
+Store data in a separate file inside /data folder
+
+No API calls
+
+====================================================
+STOCK DETAIL PAGE (/stock/:symbol)
+
+Must open in a NEW TAB
+
+Show ONLY the selected stock’s graph
+
+Display:
+
+Company name
+
+Symbol
+
+Current fake price
+
+BUY & SELL FUNCTIONALITY (SIMULATED REAL LOGIC):
+
+Buy stock → increases quantity
+
+Sell stock → decreases quantity
+
+Prevent selling more than owned
+
+Remove stock if quantity becomes zero
+
+Maintain and calculate:
+
+Quantity
+
+Average Buy Price
+
+Total Invested Amount
+
+Profit / Loss (P&L)
+
+All logic handled via Context API
+
+====================================================
+PORTFOLIO PAGE REQUIREMENTS
+
+Create a dedicated /portfolio route
+
+Display all purchased stocks in a clean table or card layout
+
+Show for each stock:
+
+Company name & symbol
+
+Quantity owned
+
+Average buy price
+
+Current price
+
+Total invested amount
+
+Current value
+
+Profit / Loss (green for profit, red for loss)
+
+Show overall portfolio summary at the top:
+
+Total invested amount
+
+Total current value
+
+Overall Profit / Loss
+
+Data must update in real-time when buy/sell happens
+
+If no stocks are owned:
+
+Show a clean empty state message
+
+All portfolio calculations must be handled via PortfolioContext
+
+====================================================
+ABOUT US PAGE (/about)
+
+Create a professional About Us page similar in tone to Groww/Zerodha
+
+Content should include:
+
+1. Company Introduction
+
+Example tone:
+"Investro is a modern investment platform built to make stock market investing simple, transparent, and accessible to everyone."
+
+2. Mission Statement
+
+"To empower individuals with the tools and confidence needed to grow their wealth through smart investing."
+
+3. Vision
+
+"To become India's most trusted digital investment experience."
+
+4. Why Investro?
+
+Simple and intuitive design
+
+Transparent pricing (simulated)
+
+Real-time market insights
+
+Secure and reliable platform
+
+5. Trust Section
+
+Add a professional trust-style section like:
+
+1M+ Users (simulated)
+
+₹10,000+ Cr simulated trades
+
+99.9% Platform uptime
+
+Design style:
+
+Clean sections
+
+Dark theme
+
+Centered headings
+
+Minimal but elegant layout
+
+====================================================
+HELP PAGE (/help) – Like Groww Support Page
+
+Create a clean Help & Support page similar to Groww
+
+Include:
+
+1. Search Help Bar (UI only, no backend required)
+2. Help Categories (Cards or grid layout):
+
+Account Opening
+
+Buying & Selling Stocks
+
+Portfolio & Reports
+
+Charges & Pricing
+
+Security & Privacy
+
+3. FAQ Section (Accordion style):
+
+Example questions:
+
+How do I buy stocks on Investro?
+
+How is profit and loss calculated?
+
+Is Investro free to use?
+
+Is my data secure?
+
+4. Contact Support Section:
+
+Email: support@investro.com
+ (dummy)
+
+Support hours (dummy)
+
+Style:
+
+Minimal
+
+Professional
+
+Clear spacing
+
+Premium finance UI
+
+====================================================
+STATE MANAGEMENT (MANDATORY)
+
+AuthContext:
+
+Login / Logout
+
+Persist state with localStorage
+
+MarketContext:
+
+NIFTY 50 stock data
+
+Market overview graph data
+
+PortfolioContext:
+
+Buy stock
+
+Sell stock
+
+Quantity management
+
+Average price calculation
+
+Invested amount tracking
+
+Profit & Loss calculations
+
+====================================================
+ROUTING
+
+Use React Router DOM
+
+Required routes:
+
+/
+
+/dashboard
+
+/portfolio
+
+/stock/:symbol
+
+/login
+
+/register
+
+/about
+
+/help
+
+====================================================
+FOLDER STRUCTURE (STRICT)
+
+src/
+├─ components/
+├─ pages/
+├─ context/
+├─ data/
+├─ routes/
+├─ App.jsx
+├─ main.jsx
+
+====================================================
+OUTPUT REQUIREMENTS
+
+Provide FULL React code for all files
+
+Code must be clean, readable, and production-style
+
+Must follow the exact folder structure
+
+Must be ready to run directly in Replit without any modification
+
+No pseudo code
+
+No partial snippets
+
+No explanations
+
+Provide complete working implementation
